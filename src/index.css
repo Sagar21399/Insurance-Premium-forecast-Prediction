@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 7%;
+    --foreground: 210 40% 93%;
+
+    --card: 222 41% 10%;
+    --card-foreground: 210 40% 93%;
+
+    --popover: 222 41% 10%;
+    --popover-foreground: 210 40% 93%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 7%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 210 40% 80%;
+
+    --muted: 215 28% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 187 72% 55%;
+    --accent-foreground: 222 47% 7%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 215 28% 18%;
+    --input: 215 28% 18%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.625rem;
+
+    --glow-primary: 0 0 40px hsl(217 91% 60% / 0.15);
+    --glow-accent: 0 0 40px hsl(187 72% 55% / 0.1);
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 7%) 0%, hsl(222 41% 12%) 50%, hsl(217 40% 10%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(222 41% 11%) 0%, hsl(222 41% 9%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(187 72% 55%) 100%);
+    --gradient-text: linear-gradient(135deg, hsl(210 40% 96%) 0%, hsl(217 91% 70%) 100%);
+
+    --sidebar-background: 222 41% 10%;
+    --sidebar-foreground: 210 40% 93%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 7%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 210 40% 93%;
+    --sidebar-border: 215 28% 18%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-text {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .grid-pattern {
+    background-image: 
+      linear-gradient(hsl(215 28% 18% / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(215 28% 18% / 0.3) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .dot-pattern {
+    background-image: radial-gradient(hsl(215 28% 18% / 0.5) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
